@@ -178,7 +178,7 @@ This is the part we're proudest of. **Your code never leaves your Mac.** Not for
 | Component | Source | Outbound calls | Verdict |
 |-----------|--------|:---:|:---:|
 | **server.py** (ours) | We wrote it line by line | **0** | ✅ Safe |
-| **agent.py** (browser agent) | We wrote it | **0** (talks to localhost CDP only) | ✅ Safe |
+| **browser agent** (separate repo) | [nicedreamzapp/browser-agent](https://github.com/nicedreamzapp/browser-agent) — we wrote it | **0** (talks to localhost CDP only) | ✅ Safe |
 | **mlx-lm** | Apple ML team | **0** | ✅ Safe |
 | **MLX framework** | Apple | **0** | ✅ Safe |
 | **Model weights** | HuggingFace verified mlx-community repos | **0** at runtime | ✅ Safe |
@@ -476,12 +476,14 @@ The server (`proxy/server.py`) is **one file, ~1000 lines**. It does four things
 
 ## 🌐 Browser Agent
 
-A standalone browser agent (`agent.py`) that controls your **real Brave browser** via Chrome DevTools Protocol — powered entirely by local AI. No Claude Code wrapper needed.
+A standalone browser agent that controls your **real Brave browser** via Chrome DevTools Protocol — powered entirely by local AI. No Claude Code wrapper needed.
+
+> 🧭 **The browser agent lives in its own repo:** [`nicedreamzapp/browser-agent`](https://github.com/nicedreamzapp/browser-agent). It's not bundled inside this repo. The `Browser Agent.command` launcher here points at the installed location (`~/.local/browser-agent/agent.py`) that you get from cloning the browser-agent repo separately. Keeping it in its own project keeps both repos focused and stops "edit the wrong file" drift between a vendored copy and the real source of truth.
 
 ```
          📝 Your task
           │
-     🤖 agent.py              ← autonomous browser agent
+     🤖 agent.py              ← autonomous browser agent (separate repo)
           │
      ⚡ MLX Server             ← local AI decides what to do
      (Gemma · Llama · Qwen)
@@ -559,7 +561,6 @@ The persona file (`NarrativeGemma/CLAUDE.md`) is loaded as a system prompt at la
 📦 claude-code-local/
  ├── ⚡ proxy/
  │   └── server.py              ← MLX Native Anthropic Server with tool-call recovery (~1000 lines)
- ├── 🌐 agent.py                ← Standalone browser agent with context memory pipeline
  ├── 🚀 launchers/
  │   ├── Claude Local.command    ← Default fighter — Claude Code + local model
  │   ├── Gemma 4 Code.command    ← 🟢 THE QUICK ONE
