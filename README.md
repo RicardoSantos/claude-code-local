@@ -15,6 +15,18 @@
   </p>
 </p>
 
+> ## 🧩 You're looking at the **BRAIN** of a three-repo local-first ambient-computing stack
+>
+> Pair it with its sibling repos for the full experience:
+>
+> | 🤖 **THIS REPO** | 🎤 **NarrateClaude** | 🌐 **browser-agent** |
+> |:---:|:---:|:---:|
+> | **BRAIN** | **EARS + MOUTH** | **HANDS** |
+> | Runs local AI (Gemma / Llama / Qwen) + Claude Code | Talk to it, hear it in your cloned voice — 100% on-device | Drives a real Brave browser via Chrome DevTools |
+> | *You are here* 👈 | 🔗 [**github.com/nicedreamzapp/NarrateClaude**](https://github.com/nicedreamzapp/NarrateClaude) | 🔗 [**github.com/nicedreamzapp/browser-agent**](https://github.com/nicedreamzapp/browser-agent) |
+>
+> 👉 **[See how all three fit together below](#-the-complete-local-first-stack)**
+
 ---
 
 ## 🥊 The Lineup — Pick Your Fighter
