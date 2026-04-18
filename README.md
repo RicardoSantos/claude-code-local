@@ -779,5 +779,6 @@ Tested on **Apple M5 Max** with **128 GB unified memory**.
 
 <p align="center">
   <strong>📜 MIT License</strong> — Use it however you want.<br><br>
-  ⭐ <strong>Star this repo if it helped you!</strong> ⭐
+  ⭐ <strong>Star this repo if it helped you!</strong> ⭐<br><br>
+  <a href="https://github.com/nicedreamzapp/claude-code-local/stargazers"><img src="https://img.shields.io/github/stars/nicedreamzapp/claude-code-local?style=for-the-badge&logo=github&color=f5c542&labelColor=1f2328" alt="GitHub stars"></a>
 </p>
